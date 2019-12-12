@@ -1,18 +1,12 @@
-import React, { useState } from 'react'
-import Head from 'next/head'
+import { useState } from 'react';
 
-const Home = () => {
+export default () => {
   const [partOneValue, setPartOneValue] = useState();
   const [partTwoValue, setPartTwoValue] = useState();
   const emailSubject = `"hometeam coding challenge: <Your Name>"`
 
   return (
     <div>
-      <Head>
-        <title>Coding Challenge</title>
-        <link rel="image" href="/production.png" />
-      </Head>
-
       <div className="page">
         <div className="container">
           <h1 className="h1">Hometeam coding challenge</h1>
@@ -162,5 +156,3 @@ const Home = () => {
     </div>
   );
 }
-
-export default Home

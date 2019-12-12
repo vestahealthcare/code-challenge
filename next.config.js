@@ -1,5 +1,5 @@
+const prod = process.env.NODE_ENV === 'production'
+
 module.exports = {
-  // some configuration
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/code-challenge' : '',
-  // another configuration
+  'process.env.BACKEND_URL': prod ? '/Next-gh-page-example' : ''
 }
