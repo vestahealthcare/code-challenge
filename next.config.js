@@ -6,7 +6,7 @@ module.exports = {
       "/": { page: "/" }
     }
   },
-  assetPrefix: !debug ? '/code-challenge/' : '',
+  assetPrefix: !debug ? '/code-challenge' : '',
   webpack: (config, { dev }) => {
     config.module.rules = config.module.rules.map(rule => {
       if(rule.loader === 'babel-loader') {
