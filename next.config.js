@@ -1,4 +1,3 @@
-
 module.exports = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/code-challenge' : ''
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/code-challenge' : '',
 }
