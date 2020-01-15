@@ -3,13 +3,13 @@ import { useState } from 'react';
 export default () => {
   const [partOneValue, setPartOneValue] = useState();
   const [partTwoValue, setPartTwoValue] = useState();
-  const emailSubject = `"hometeam coding challenge: <Your Name>"`
+  const emailSubject = `"vesta coding challenge: <Your Name>"`
 
   return (
     <div>
       <div className="page">
         <div className="container">
-          <h1 className="h1">Hometeam coding challenge</h1>
+          <h1 className="h1">Vesta Coding Challenge</h1>
           <p>
             Below is your challenge!
           </p>
@@ -106,7 +106,7 @@ export default () => {
           padding: 50px;
         }
         .h1 {
-          color: #053075
+          color: #164c30
         }
         .h2 {
           color: #053075
