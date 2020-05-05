@@ -3,7 +3,8 @@ import { useState } from 'react';
 export default () => {
   const [partOneValue, setPartOneValue] = useState();
   const [partTwoValue, setPartTwoValue] = useState();
-  const emailSubject = `"vesta coding challenge: <Your Name>"`
+  const emailSubject = `"vesta coding challenge: <Your Name>"`;
+  const contactEmail = 'brad@vestahealthcare.com';
 
   return (
     <div>
@@ -14,7 +15,7 @@ export default () => {
             Below is your challenge!
           </p>
           <p>
-            Please write your code as if it were going into a production application. Once you're finished, please email your code to <a href="">brad@hometeamcare.com</a> with the subject {emailSubject}
+            Please write your code as if it were going into a production application. Once you're finished, please email your code to <a href="">{contactEmail}</a> with the subject {emailSubject}
           </p>
           <p>
             There are inputs at the bottom to help you test your code before submitting.
@@ -33,22 +34,32 @@ export default () => {
             Below is a list of what each opcode means:
           </p>
           <div className="opcodes">
-            <p>
-              99 - The program is finished and should immediately halt
-            </p>
-            <p>
-              1 - Adds together numbers read from two positions and stores the result in a third position.
-            </p>
-            <p>
-              The three integers immediately after the opcode in the array tell you these three positions.
-            </p>
-            <p>
-              The first two indicate the positions from which you should read the input values, and the third indicates the position at which the output should be stored.
-            </p>
-            <p>For example, if your Intcode computer encounters 1,10,20,30, it should read the values at positions 10 and 20, add those values, and then overwrite the value at position 30 with their sum.</p>
-            <p>
-              2 - Works exactly like opcode 1, except it multiplies the two inputs instead of adding them.
-            </p>
+            <ul>
+              <li>
+                <p>
+                  99 - The program is finished and should immediately halt
+                </p>
+              </li>
+              <li>
+                <p>
+                  1 - Adds together numbers read from two positions and stores the result in a third position.
+                </p>
+                <p>
+                  The three integers immediately after the opcode in the array tell you these three positions.
+                </p>
+                <p>
+                  The first two indicate the positions from which you should read the input values, and the third indicates the position at which the output should be stored.
+                </p>
+                <p>
+                  For example, if your Intcode computer encounters 1,10,20,30, it should read the values at positions 10 and 20, add those values, and then overwrite the value at position 30 with their sum.
+                  </p>
+              </li>
+              <li>
+                <p>
+                  2 - Works exactly like opcode 1, except it multiplies the two inputs instead of adding them.
+                </p>
+              </li>
+            </ul>
           </div>
           <p>
             Once you're done processing an opcode, move to the next one by stepping forward 4 positions.
@@ -68,7 +79,7 @@ export default () => {
           <p>Enter your result:</p>
           <input className="number-input" type="number" value={partOneValue} onChange={(e) => {
             setPartOneValue(e.target.value);
-          }}/>
+          }} />
           {partOneValue !== undefined && (partOneValue === "3895705" ? <p className="correct">Correct!</p> : <p className="incorrect">Incorrect!</p>)}
           <h2 className="h1">Part II:</h2>
           <p>
@@ -78,7 +89,7 @@ export default () => {
           <p>Enter 100 * input1 + input2:</p>
           <input className="number-input" type="number" value={partTwoValue} onChange={(e) => {
             setPartTwoValue(e.target.value);
-          }}/>
+          }} />
           {partTwoValue !== undefined && (partTwoValue === "6417" ? <p className="correct">Correct!</p> : <p className="incorrect">Incorrect!</p>)}
         </div>
       </div>
