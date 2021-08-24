@@ -4,7 +4,7 @@ export default () => {
   const [partOneValue, setPartOneValue] = useState();
   const [partTwoValue, setPartTwoValue] = useState();
   const emailSubject = `"vesta coding challenge: <Your Name>"`;
-  const contactEmail = 'brad@vestahealthcare.com';
+  const contactEmail = 'eng-interviews@vestahealthcare.com';
 
   return (
     <div>
