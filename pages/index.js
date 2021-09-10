@@ -1,8 +1,6 @@
 import { useState } from 'react';
 
 export default () => {
-  const [partOneValue, setPartOneValue] = useState();
-  const [partTwoValue, setPartTwoValue] = useState();
   const emailSubject = `"vesta coding challenge: <Your Name>"`;
   const contactEmail = 'eng-interviews@vestahealthcare.com';
 
@@ -84,8 +82,9 @@ export default () => {
           </p>
           <p>100 * input1 + input2:</p>
           <p>Result expected: <strong>6417</strong></p>
+        </div>
       </div>
-
+    
       <style jsx>{`
         .correct {
           color: #71a310;
@@ -155,7 +154,8 @@ export default () => {
           font-size: 13px;
           color: #333;
         }
-      `}</style>
+      `}
+      </style>
     </div>
   );
 }
