@@ -1,8 +1,6 @@
 import { useState } from 'react';
 
 export default () => {
-  const [partOneValue, setPartOneValue] = useState();
-  const [partTwoValue, setPartTwoValue] = useState();
   const emailSubject = `"vesta coding challenge: <Your Name>"`;
   const contactEmail = 'eng-interviews@vestahealthcare.com';
 
@@ -66,7 +64,7 @@ export default () => {
           </p>
           <h2 className="h1">Part I:</h2>
           <p>
-            Run your computer on the Intcode program below and enter the result.  The result should be stored at index 0.
+            Run your computer on the Intcode program below and check if the result is the same.  The result should be stored at index 0.
           </p>
           <div className="code-block">
             <code>
@@ -76,24 +74,17 @@ export default () => {
               99,2,14,0,0]
             </code>
           </div>
-          <p>Enter your result:</p>
-          <input className="number-input" type="number" value={partOneValue} onChange={(e) => {
-            setPartOneValue(e.target.value);
-          }} />
-          {partOneValue !== undefined && (partOneValue === "3895705" ? <p className="correct">Correct!</p> : <p className="incorrect">Incorrect!</p>)}
+          <p>Result expected: <strong>3895705</strong></p>
           <h2 className="h1">Part II:</h2>
           <p>
             Assuming index 1 and 2 in the provided array are inputs.  Which two inputs will produce the output 19690720?
             Both values will be between 0 and 99.
           </p>
-          <p>Enter 100 * input1 + input2:</p>
-          <input className="number-input" type="number" value={partTwoValue} onChange={(e) => {
-            setPartTwoValue(e.target.value);
-          }} />
-          {partTwoValue !== undefined && (partTwoValue === "6417" ? <p className="correct">Correct!</p> : <p className="incorrect">Incorrect!</p>)}
+          <p>100 * input1 + input2:</p>
+          <p>Result expected: <strong>6417</strong></p>
         </div>
       </div>
-
+    
       <style jsx>{`
         .correct {
           color: #71a310;
@@ -163,7 +154,8 @@ export default () => {
           font-size: 13px;
           color: #333;
         }
-      `}</style>
+      `}
+      </style>
     </div>
   );
 }
