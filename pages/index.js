@@ -13,7 +13,7 @@ export default () => {
             Below is your challenge!
           </p>
           <p>
-            Please write your code as if it were going into a production application. Once you're finished, please email your code to <a href="">{contactEmail}</a> with the subject {emailSubject}
+            Once you finish the exercise, paste the solution in https://gist.github.com/ and reply to our email with the link. Make sure you make it public for us to see it.
           </p>
           <p>
             There are inputs at the bottom to help you test your code before submitting.
